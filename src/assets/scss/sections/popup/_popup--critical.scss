@@ -1,0 +1,27 @@
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000,0.4);
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+
+}
+.popup-formation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    z-index: 5;
+    opacity: 0;
+    overflow-y: scroll;
+    pointer-events: none;
+    @media (min-width: 1200px) {
+        overflow-y: hidden;
+    }
+}

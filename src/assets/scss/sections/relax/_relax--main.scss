@@ -1,0 +1,360 @@
+.relax {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+    background-color: $black;
+    
+    &__title {
+        max-width: 172px;
+        margin-bottom: -12px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    &__content {
+        position: relative;
+        z-index: 1;
+    }
+    
+    &__background {
+        
+        
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: -moz-linear-gradient(90deg, rgba(19,19,19,0.55) 0%, rgba(19,19,19,0.15) 100%); /* ff3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(19,19,19,0.15)), color-stop(100%, rgba(19,19,19,0.55))); /* safari4+,chrome */
+            background: -webkit-linear-gradient(90deg, rgba(19,19,19,0.55) 0%, rgba(19,19,19,0.15) 100%); /* safari5.1+,chrome10+ */
+            background: -o-linear-gradient(90deg, rgba(19,19,19,0.55) 0%, rgba(19,19,19,0.15) 100%); /* opera 11.10+ */
+            background: -ms-linear-gradient(90deg, rgba(19,19,19,0.55) 0%, rgba(19,19,19,0.15) 100%); /* ie10+ */
+            background: linear-gradient(0deg, rgba(19,19,19,0.55) 0%, rgba(19,19,19,0.15) 100%); /* w3c */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#131313',GradientType=0 ); /* ie6-9 */
+        }
+    }
+    
+    &__text {
+        position: relative;
+        
+        & + .relax__text {
+            margin-top: 32px;
+        }
+        
+        &--noImage {
+            max-width: 280px;
+            @media (max-width: 599px) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        
+        &--banana {
+            text-align: right;
+            max-width: 256px;
+            margin-left:auto;
+        }
+        
+        &--pineapple {
+            max-width: 275px;
+        }
+        
+        span {
+            font-size: 20px;
+            line-height: 25px;
+            display: block;
+            margin-bottom: 8px;
+            font-family: MullerBold;
+        }
+        
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    
+    &__line {
+        margin-top: 32px;
+        display: none;
+    }
+    
+    &__img {
+        &--family {
+            img {
+                width: 100%;
+            }
+        }
+        
+        &--apple {
+            display: none;
+        }
+        
+        &--absolute {
+            position: absolute;
+            
+            img {
+                width: 100%;
+            }
+        }
+        
+        &--pineapple {
+            top: -36px;
+            right: -12px;
+            width: 93px;
+        }
+        
+        &--banana {
+            bottom: -59px;
+            width: 63px;
+            left: 67px;
+        }
+        
+        &--juice {
+            bottom: -64px;
+            left: -5px;
+            width: 55px;
+            transform: scaleX(-1) rotate(20deg);
+        }
+    }
+    
+    @media (min-width: 650px) {
+        overflow: hidden;
+        padding: 100px 0 132px 0;
+        overflow: hidden;
+        &__title {
+            max-width: 338px;
+        }
+        
+        
+        &__background {
+            position: absolute;
+            top: -60px;
+            left: auto;
+            right: 0;
+            width: 100%;
+            
+            
+        }
+        &__content{
+            padding-top: 19vw;
+        }
+        
+        &__text {
+            position: relative;
+            
+            & + .relax__text {
+                margin-top: 0;
+            }
+            
+            &--noImage {
+                max-width: 300px;
+                display: block;
+                position: absolute;
+                top: 88px;
+                left: 0;
+            }
+            
+            &--banana {
+                display: inline-block;
+                vertical-align: top;
+                text-align: left;
+                width: span(3.5 of 7);
+                max-width: none;
+            }
+            
+            &--pineapple {
+                display: inline-block;
+                vertical-align: top;
+                width: span(3.5 of 7);
+                padding-right: 36px;
+                box-sizing: border-box;
+                max-width: none;
+            }
+            
+            span {
+                font-size: 20px;
+                line-height: 25px;
+                display: block;
+                margin-bottom: 8px;
+                font-family: MullerBold;
+            }
+            
+            p {
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+        
+        &__line {
+            font-size: 0;
+            display: block;
+           
+        }
+        
+        &__img {
+            &--family {
+                margin-left: auto;
+                width: 52%;
+                max-width: 670px;
+                position: relative;
+                &:before {
+                    height: 20%;
+                    top: auto;
+                    bottom: 0;
+                    //background: -moz-linear-gradient(90deg, rgba(19,19,19,1) 0%, rgba(19,19,19,0) 65%); /* ff3.6+ */
+                    //background: -webkit-gradient(linear, left top, left bottom, color-stop(35%, rgba(19,19,19,0)), color-stop(100%, rgba(19,19,19,1))); /* safari4+,chrome */
+                    //background: -webkit-linear-gradient(90deg, rgba(19,19,19,1) 0%, rgba(19,19,19,0) 65%); /* safari5.1+,chrome10+ */
+                    //background: -o-linear-gradient(90deg, rgba(19,19,19,1) 0%, rgba(19,19,19,0) 65%); /* opera 11.10+ */
+                    //background: -ms-linear-gradient(90deg, rgba(19,19,19,1) 0%, rgba(19,19,19,0) 65%); /* ie10+ */
+                    //background: linear-gradient(0deg, rgba(19,19,19,1) 0%, rgba(19,19,19,0) 65%); /* w3c */
+                    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#131313',GradientType=0 ); /* ie6-9 */
+                    background: -moz-linear-gradient(90deg, rgba(19,19,19,1) 15%, rgba(19,19,19,0) 100%); /* ff3.6+ */
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(19,19,19,0)), color-stop(85%, rgba(19,19,19,1))); /* safari4+,chrome */
+                    background: -webkit-linear-gradient(90deg, rgba(19,19,19,1) 15%, rgba(19,19,19,0) 100%); /* safari5.1+,chrome10+ */
+                    background: -o-linear-gradient(90deg, rgba(19,19,19,1) 15%, rgba(19,19,19,0) 100%); /* opera 11.10+ */
+                    background: -ms-linear-gradient(90deg, rgba(19,19,19,1) 15%, rgba(19,19,19,0) 100%); /* ie10+ */
+                    background: linear-gradient(0deg, rgba(19,19,19,1) 15%, rgba(19,19,19,0) 100%); /* w3c */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#131313',GradientType=0 ); /* ie6-9 */
+                }
+            }
+            
+            &--absolute {
+                position: absolute;
+            }
+            
+            &--pineapple {
+                top: -79px;
+                right: auto;
+                left: -107px;
+                width: 120px;
+                transform: rotate(45deg);
+            }
+            
+            &--apple {
+                top: -205px;
+                left: 91%;
+                width: 110px;
+                display: block;
+            }
+            
+            &--banana {
+                width: 93px;
+                left: 83%;
+                bottom: -39px;
+                transform: rotate(-22deg);
+            }
+            
+            &--juice {
+                bottom: auto;
+                top: -127px;
+                left: 110%;
+                width: 75px;
+                transform: scaleX(1) translate(-50%,0) rotate(0deg);
+            }
+        }
+    }
+    
+    
+    @media (min-width: 1200px) {
+        padding: toRem(120) 0;
+        
+        &__title {
+            max-width: toRem(400);
+            margin-left: span(0.5 of 8);
+            margin-bottom: -(toRem(122));
+        }
+        
+        &__content {
+            padding: 0;
+            width: span(6 of 8);
+            margin-left:  span(0.5 of 8);
+        }
+        
+        &__background {
+            position: static;
+            top: auto;
+            left: auto;
+            right: auto;
+            margin-bottom: -(toRem(85));
+            
+        }
+        
+        &__text {
+            
+            & + .relax__text {
+                margin-top: 0;
+            }
+            
+            &--noImage {
+                max-width: toRem(294);
+                top: toRem(141);
+            }
+            
+            &--banana {
+                width: 34.75%;
+            }
+            
+            &--pineapple {
+                width: 39.75%;
+                margin-left: span(1.73 of 8);
+                padding-right: toRem(58);
+            }
+            
+            span {
+                font-size: toRem(16);
+                line-height: toRem(8);
+                margin-bottom: toRem(20);
+            }
+            
+            p {
+                font-size: toRem(14);
+                line-height: toRem(20);
+            }
+        }
+        
+        &__line {
+            margin-top: 0;
+        }
+        
+        &__img {
+            
+            &--family {
+                width: span(4.5 of 6);
+                max-width: none;
+            }
+            
+            &--pineapple {
+                bottom: toRem(29);
+                right: 100%;
+                left: auto;
+                width: toRem(140);
+                transform: none;
+                top:auto;
+            }
+            
+            &--apple {
+                top: -(toRem(121));
+                left: -(toRem(72));
+                width: toRem(106);
+            }
+            
+            &--banana {
+                top: 76%;
+                width: toRem(100);
+                right: toRem(30);
+                bottom: auto;
+                left: auto;
+            }
+            
+            &--juice {
+                top: -(toRem(124));
+                left: 100%;
+                width: toRem(89);
+                transform: scaleX(1) translate(0, 0) rotate(0deg);
+            }
+        }
+    }
+}

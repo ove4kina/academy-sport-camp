@@ -1,0 +1,173 @@
+.training{
+    &__button{
+        &--navigation{
+            &::before{
+                transition: transform 0.3s ease;
+            }
+            &:active{
+                &.training__button{
+                    &--next{
+                        &::before{
+                            transform: translate(10px,0);
+                        }
+                
+                    }
+                    &--prev{
+                        &::before{
+                            transform: rotate(180deg) translate(10px,0);
+                        }
+                
+                    }
+                }
+            }
+        }
+    }
+    &__man{
+        @media (max-width: 767px){
+            transition: 1s ease;
+            transition-property: width,left,bottom;
+        }
+    }
+    &__photo{
+        transition: 0.5s ease;
+        transition-property: opacity,left,height;
+    }
+    @media (min-width: 650px) {
+        &__benefit{
+            *{
+                transition: 0.1s ease opacity, 0.3s ease transform;
+            }
+        }
+        &__section{
+            &.active{
+                .training{
+                    &__benefit{
+                        *{
+                            opacity: 1;
+                            transform: translate(0,0);
+                            transition-duration: 0.75s;
+                        }
+                        @for $i from 0 through 3 {
+                            &:nth-child(#{$i}) {
+                                @for $j from 0 through 3 {
+                                    *:nth-child(#{$j}) {
+                                        transition-delay: 0.05s + 0.1s*$i + $j*0.05s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &__title{
+            &.show-2{
+                .title{
+                    &__strokes{
+                        span.tape--1{
+                            span{
+                                width: 0;
+                            }
+                        }
+                        span.tape--2{
+                            span{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__button{
+            &--navigation{
+                &:hover{
+                    &.training__button{
+                        &--next{
+                            &::before{
+                                transform: translate(5px,0);
+                            }
+                        
+                        }
+                        &--prev{
+                            &::before{
+                                transform: rotate(180deg) translate(5px,0);
+                            }
+                        
+                        }
+                    }
+                }
+                &:active{
+                    &.training__button{
+                        &--next{
+                            &::before{
+                                transform: translate(10px,0);
+                            }
+                        
+                        }
+                        &--prev{
+                            &::before{
+                                transform: rotate(180deg) translate(10px,0);
+                            }
+                        
+                        }
+                    }
+                }
+            }
+        }
+        &__changing-text{
+            transition: 0.3s ease;
+            transition-property: opacity,transform;
+            &.active{
+                transition-delay: 0.2s;
+            }
+        }
+    }
+}
+
+.slide{
+    @media (min-width: 768px){
+        transition: opacity .1s ease;
+        &.swiper-slide-active{
+            transition-duration: .1s;
+        }
+    }
+    &__img{
+        img{
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            &.swiper-lazy-loaded{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.training__slider{
+    .swiper-wrapper{
+        &.hide{
+            .swiper-slide-active{
+                &::before{
+                    animation: translateSmallHide .3s ease-out 0s both;
+                }
+                &::after{
+                    animation: translateBigHide .3s ease-out .3s both;
+                }
+                .slide{
+                    &__title{
+                        animation: translateWithOutSkew .3s ease-out .1s both;
+                    }
+                    &__text{
+                        animation: translateWithOutSkew .3s ease-out .2s both;
+                    }
+                    &__img{
+                        animation: translateMediumHide .3s ease-out .2s both;
+                    }
+                }
+            }
+
+        }
+    }
+}

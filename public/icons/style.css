@@ -1,0 +1,240 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?1bzpca');
+  src:  url('fonts/icomoon.eot?1bzpca#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1bzpca') format('truetype'),
+    url('fonts/icomoon.woff?1bzpca') format('woff'),
+    url('fonts/icomoon.svg?1bzpca#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Vector1:before {
+  content: "\e900";
+}
+.icon-Vector2:before {
+  content: "\e901";
+}
+.icon-Vector3:before {
+  content: "\e902";
+}
+.icon-Vector4:before {
+  content: "\e903";
+}
+.icon-Vector5:before {
+  content: "\e904";
+}
+.icon-Vector6:before {
+  content: "\e905";
+}
+.icon-Vector7:before {
+  content: "\e906";
+}
+.icon-Vector8:before {
+  content: "\e907";
+}
+.icon-Vector9:before {
+  content: "\e908";
+}
+.icon-Vector10:before {
+  content: "\e909";
+}
+.icon-Vector11:before {
+  content: "\e90a";
+}
+.icon-Vector12:before {
+  content: "\e90b";
+}
+.icon-Vector13:before {
+  content: "\e90c";
+}
+.icon-Vector14:before {
+  content: "\e90d";
+}
+.icon-Vector15:before {
+  content: "\e90e";
+}
+.icon-Vector16:before {
+  content: "\e90f";
+}
+.icon-Vector17:before {
+  content: "\e910";
+}
+.icon-Vector18:before {
+  content: "\e911";
+}
+.icon-Vector19:before {
+  content: "\e912";
+}
+.icon-Vector20:before {
+  content: "\e913";
+}
+.icon-Vector21:before {
+  content: "\e914";
+}
+.icon-Vector22:before {
+  content: "\e915";
+}
+.icon-Vector23:before {
+  content: "\e916";
+}
+.icon-Vector24:before {
+  content: "\e917";
+}
+.icon-Vector25:before {
+  content: "\e918";
+}
+.icon-Vector26:before {
+  content: "\e919";
+}
+.icon-Vector27:before {
+  content: "\e91a";
+}
+.icon-Vector28:before {
+  content: "\e91b";
+}
+.icon-Vector29:before {
+  content: "\e91c";
+}
+.icon-Vector30:before {
+  content: "\e91d";
+}
+.icon-Vector31:before {
+  content: "\e91e";
+}
+.icon-Vector32:before {
+  content: "\e91f";
+}
+.icon-Vector33:before {
+  content: "\e920";
+}
+.icon-Vector34:before {
+  content: "\e921";
+}
+.icon-Vector35:before {
+  content: "\e922";
+}
+.icon-Vector36:before {
+  content: "\e923";
+}
+.icon-Vector37:before {
+  content: "\e924";
+}
+.icon-Vector38:before {
+  content: "\e925";
+}
+.icon-Vector39:before {
+  content: "\e926";
+}
+.icon-Vector40:before {
+  content: "\e927";
+}
+.icon-Vector41:before {
+  content: "\e928";
+}
+.icon-Vector42:before {
+  content: "\e929";
+}
+.icon-Vector43:before {
+  content: "\e92a";
+}
+.icon-Vector44:before {
+  content: "\e92b";
+}
+.icon-Vector45:before {
+  content: "\e92c";
+}
+.icon-Vector46:before {
+  content: "\e92d";
+}
+.icon-Vector47:before {
+  content: "\e92e";
+}
+.icon-Vector48:before {
+  content: "\e92f";
+}
+.icon-Vector49:before {
+  content: "\e930";
+}
+.icon-Vector50:before {
+  content: "\e931";
+}
+.icon-Vector52:before {
+  content: "\e932";
+}
+.icon-Vector51:before {
+  content: "\e933";
+}
+.icon-Vector-2:before {
+  content: "\e934";
+}
+.icon-Vector1-1:before {
+  content: "\e935";
+}
+.icon-Group-1:before {
+  content: "\e936";
+}
+.icon-vk:before {
+  content: "\e937";
+}
+.icon-fb:before {
+  content: "\e938";
+}
+.icon-inst:before {
+  content: "\e939";
+}
+.icon-date:before {
+  content: "\e93a";
+}
+.icon-i:before {
+  content: "\e93b";
+}
+.icon-vhod2:before {
+  content: "\e93c";
+}
+.icon-vhod3:before {
+  content: "\e93d";
+}
+.icon-vhod5:before {
+  content: "\e93e";
+}
+.icon-vhod6:before {
+  content: "\e93f";
+}
+.icon-vhod4:before {
+  content: "\e940";
+}
+.icon-vhod8:before {
+  content: "\e941";
+}
+.icon-vhod7:before {
+  content: "\e942";
+}
+.icon-ne1:before {
+  content: "\e943";
+}
+.icon-vhod1:before {
+  content: "\e944";
+}
+.icon-ne3:before {
+  content: "\e945";
+}
+.icon-ne2:before {
+  content: "\e946";
+}

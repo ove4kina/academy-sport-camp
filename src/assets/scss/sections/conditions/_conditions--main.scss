@@ -1,0 +1,177 @@
+.conditions{
+    position: relative;
+    width: 100%;
+    z-index:4;
+    &__title{
+        margin-bottom: 10px;
+    }
+    &__description{
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: MullerRegular;
+        @media (max-width: 768px){
+            max-width: 336px;
+        }
+    }
+    &__steps{
+        white-space: nowrap;
+        overflow-x: scroll;
+        z-index:1;
+        -webkit-overflow-scrolling: touch;
+        @media (max-width: 767px){
+            margin: 0 -7.05%;
+            padding: 0 6.25%;
+            &::before{
+                content: '';
+                z-index: 2;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 30px;
+                height: 100%;
+                background: rgb(19,19,19);
+                background: -moz-linear-gradient(90deg, rgba(19,19,19,1) 8%, rgba(19,19,19,0) 70%);
+                background: -webkit-linear-gradient(90deg, rgba(19,19,19,1) 8%, rgba(19,19,19,0) 70%);
+                background: linear-gradient(90deg, rgba(19,19,19,1) 8%, rgba(19,19,19,0) 70%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131313",endColorstr="#131313",GradientType=1);
+            }
+            &::after{
+                content: '';
+                z-index: 2;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 30px;
+                height: 100%;
+                background: rgb(19,19,19);
+                background: -moz-linear-gradient(270deg, rgba(19,19,19,1) 8%, rgba(19,19,19,0) 70%);
+                background: -webkit-linear-gradient(270deg, rgba(19,19,19,1) 8%, rgba(19,19,19,0) 70%);
+                background: linear-gradient(270deg, rgba(19,19,19,1) 8%, rgba(19,19,19,0) 70%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131313",endColorstr="#131313",GradientType=1);
+            }
+        }
+    }
+    &__step{
+        display: inline-block;
+        white-space: normal;
+        position: relative;
+        vertical-align: top;
+        padding-top: 50px;
+        width: 200px;
+        &+&{
+            margin-left: 32px;
+        }
+        p{
+            font-family: MullerBold;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+        span{
+            font-size: 14px;
+            line-height: 20px;
+            font-family: MullerRegular;
+        }
+    }
+    &__number{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        &::before, &::after{
+            position: absolute;
+            font-size: 140px;
+            font-family: MullerBold;
+            color: #131313;
+        }
+        &::before{
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            -webkit-text-stroke: 1px #595959;
+            text-stroke: 1px #595959;
+        }
+        &::after{
+            z-index: 0;
+            top: 5px;
+            left: 5px;
+            -webkit-text-stroke: 1px #594e1d;
+            text-stroke: 1px #594e1d;
+        }
+        &--one{
+            &::before, &::after{
+                content: '1';
+            }
+        }
+        &--two{
+            &::before, &::after{
+                content: '2';
+            }
+        }
+        &--three{
+            &::before, &::after{
+                content: '3';
+            }
+        }
+    }
+    @media (min-width: 650px){
+        padding-top: 50px;
+        &__title{
+            width: span(4.5 of 7);
+            margin-bottom: 16px;
+        }
+        &__description{
+            width: span(3.5 of 7);
+            margin-bottom: 35px;
+        }
+    }
+    @media (min-width: 1200px){
+        &__wrapper{
+            padding: 0 6.25%;
+        }
+        &__title{
+            display: inline-block;
+            width: span(4 of 7);
+            vertical-align: top;
+            margin-bottom: toRem(40);
+        }
+        &__description{
+            display: inline-block;
+            width: span(2.5 of 7);
+            vertical-align: top;
+            margin-left: span(0.5 of 7);
+            font-size: toRem(16);
+            line-height: toRem(21);
+        }
+        &__steps{
+            overflow: visible;
+        }
+        &__step{
+            padding-top: toRem(95);
+            width: toRem(300);
+            &+&{
+                margin-left:toRem(58);
+            }
+            span{
+                font-size: toRem(16);
+                line-height: toRem(21);
+                font-family:reg;
+            }
+            p{
+                font-family:bold;
+                font-size: toRem(20);
+                line-height: toRem(21);
+            }
+        }
+        &__number{
+            &::before, &::after{
+                font-size: toRem(200);
+            }
+            &::after{
+                top: toRem(5);
+                left: toRem(5);
+            }
+        }
+    }
+}

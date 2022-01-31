@@ -1,0 +1,203 @@
+.footer {
+    background-color: $black;
+    position: relative;
+    z-index: 1;
+    
+    &__title {
+        margin-bottom: 20px;
+        white-space: nowrap;
+    }
+    
+    &__content {
+        margin-bottom: 8px;
+    }
+    
+    &__photo {
+        width: 92px;
+        height: 102px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 25px;
+        box-sizing: border-box;
+        position: relative;
+        &::before,&::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(#fff,0.3);
+            position: absolute;
+            transform: skewX(-9deg);
+        }
+        &::before{
+            right: -5px;
+            top: 5px;
+        }
+        &::after{
+            top: -5px;
+            left: -5px;
+        }
+    }
+    &__skew-wrapper{
+        transform:  skewX(9deg) ;
+        width: 100%;
+        height: 100%;
+        
+    }
+    &__manager{
+        margin-left: 11px;
+    }
+    &__img {
+        transform:  skewX(-9deg) ;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(1.05);
+            min-width: 100%;
+            min-height: 100%;
+            height: 100%;
+            width: auto;
+        }
+    }
+    
+   
+    
+    &__name {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 128px;
+        
+        span {
+            display: block;
+            color: rgba(#fff,0.4);
+            font-size: 12px;
+            line-height: 15px;
+            margin-bottom: 4px;
+        }
+        
+        p {
+            font-size: 24px;
+            line-height: 28px;
+            font-family: boldItalic;
+            text-transform: uppercase;
+        }
+    }
+    &__location{
+        height: 115vw;
+        max-height: 174px;
+        position: relative;
+        transition:max-height 0.3s ease;
+        &.active{
+            max-height: 115vw;
+            .footer{
+                &__map{
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+    
+    &__map,&__wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    &__contact{
+        padding-top: 16px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(#fff,0.13);
+        & > span{
+            font-size: 12px;
+            line-height: 15px;
+            color: rgba(#fff,0.4);
+            margin-bottom: 4px;
+            display: block;
+        }
+        i{
+            display: inline-block;
+            & + i{
+                margin-left: 16px;
+            }
+        }
+        a{
+            display: block;
+            span{
+                font-size: 24px;
+                line-height: 27px;
+                color: $yellow;
+                border-bottom: 1px dashed rgba($yellow,0.5);
+                display: inline-block;
+                box-sizing: border-box;
+            }
+            & + a{
+                margin-top: 12px;
+            }
+            & + p{
+                margin-top: 12px;
+            }
+            & + i{
+                margin-left: 16px;
+            }
+        }
+        p{
+            font-size: 12px;
+            line-height: 15px;
+            color: #fff;
+        }
+        &--address-absoluted{
+            position: absolute;
+            top: 14px;
+            left: 6.25%;
+            z-index: 1;
+            border: none;
+            padding: 0;
+        }
+    }
+    &__contact-wrapper{
+        @media (max-width: 649px) {
+            display: none;
+        }
+    }
+    &__button{
+        &--toggle-map{
+            width: 280px;
+            position: absolute;
+            bottom: 32px;
+            left: 6.25%;
+            z-index: 1;
+        }
+    }
+    &__map{
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    &__bottom{
+        padding: 16px 0 24px;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(#fff,0.3);
+        border-top: 1px solid rgba(#fff,0.13);
+        a{
+            display: block;
+            color: inherit;
+        }
+        p{
+            
+            & + a{
+                margin-top: 16px;
+            }
+        }
+    }
+    @media (min-width: 650px) {
+    
+    }
+    @media (min-width: 768px) {
+    }
+    
+    @media (min-width: 1200px) {
+    }
+}
